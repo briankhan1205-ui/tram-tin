@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.tramtin.crawler</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/sh</string>
+    <string>-c</string>
+    <string>cd "__ROOT__/crawler" &amp;&amp; exec "__UV__" run --frozen --quiet tram-tin run</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key><string>__PATH__</string>
+    <key>LANG</key><string>en_US.UTF-8</string>
+  </dict>
+  <!-- Mỗi giờ; máy ngủ lỡ lịch thì launchd chạy bù khi thức dậy. -->
+  <key>StartInterval</key><integer>3600</integer>
+  <key>RunAtLoad</key><true/>
+  <key>ProcessType</key><string>Background</string>
+  <key>LowPriorityIO</key><true/>
+  <key>StandardOutPath</key><string>__LOGS__/crawler.log</string>
+  <key>StandardErrorPath</key><string>__LOGS__/crawler.log</string>
+</dict>
+</plist>

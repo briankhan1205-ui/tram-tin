@@ -1,0 +1,28 @@
+[project]
+name = "tram-tin"
+version = "0.1.0"
+description = "Trạm Tin crawler: RSS → Postgres → Telegram"
+requires-python = ">=3.12"
+dependencies = [
+    "feedparser>=6.0.11",
+    "httpx>=0.28",
+    "psycopg[binary]>=3.2.10",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+tram-tin = "tram_tin.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "respx>=0.22"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tram_tin"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

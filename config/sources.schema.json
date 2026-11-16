@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Trạm Tin sources",
+  "type": "object",
+  "required": ["sources"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "type", "url"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,39}$" },
+          "name": { "type": "string", "minLength": 1 },
+          "type": { "enum": ["rss"] },
+          "url": { "type": "string", "format": "uri" },
+          "homepage": { "type": "string", "format": "uri" },
+          "max_pages": { "type": "integer", "minimum": 1, "maximum": 20, "default": 1 },
+          "pagination": {
+            "enum": ["none", "wordpress"],
+            "default": "none",
+            "description": "wordpress: lật trang bằng ?paged=N tới khi gặp tin đã có"
+          },
+          "enabled": { "type": "boolean", "default": true }
+        }
+      }
+    }
+  }
+}

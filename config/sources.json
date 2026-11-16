@@ -1,0 +1,33 @@
+{
+  "$schema": "./sources.schema.json",
+  "sources": [
+    {
+      "id": "bbc",
+      "name": "BBC Tiếng Việt",
+      "type": "rss",
+      "url": "https://feeds.bbci.co.uk/vietnamese/rss.xml",
+      "homepage": "https://www.bbc.com/vietnamese",
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "id": "rfa",
+      "name": "RFA Tiếng Việt",
+      "type": "rss",
+      "url": "https://www.rfa.org/arc/outboundfeeds/vietnamese/rss/",
+      "homepage": "https://www.rfa.org/vietnamese/",
+      "max_pages": 1,
+      "enabled": true
+    },
+    {
+      "id": "nguoi-viet",
+      "name": "Người Việt",
+      "type": "rss",
+      "url": "https://www.nguoi-viet.com/feed/",
+      "homepage": "https://www.nguoi-viet.com/",
+      "max_pages": 5,
+      "pagination": "wordpress",
+      "enabled": true
+    }
+  ]
+}
