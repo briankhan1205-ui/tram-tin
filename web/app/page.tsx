@@ -50,7 +50,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
       <header className="top">
         <Link href="/" className="brand">
           <span className="brand-mark" aria-hidden />
-          Đây là đài tiếng nói nhân dân chúng tôi
+          Bảng Tin Xóm Trọ
         </Link>
         <form className="search" action="/" method="get" role="search">
           {source && <input type="hidden" name="source" value={source} />}
