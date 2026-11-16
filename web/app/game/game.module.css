@@ -1,0 +1,97 @@
+.root {
+  position: fixed;
+  inset: 0;
+  background: #04050c;
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+}
+
+.stage canvas {
+  display: block;
+}
+
+.back {
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  color: rgba(200, 240, 255, 0.55);
+  font-size: 13px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.back:hover {
+  color: #7ff6ff;
+}
+
+.pad {
+  display: none;
+}
+
+@media (pointer: coarse) {
+  .back {
+    top: 14px;
+    bottom: auto;
+    left: auto;
+    right: 16px;
+    top: 52px;
+  }
+
+  .pad {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 16px;
+    pointer-events: none;
+  }
+}
+
+.group {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.btn {
+  pointer-events: auto;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 2px solid rgba(127, 246, 255, 0.55);
+  background: radial-gradient(circle at 35% 30%, rgba(127, 246, 255, 0.22), rgba(10, 20, 40, 0.55));
+  color: #dffcff;
+  font-size: 26px;
+  box-shadow: 0 0 14px rgba(56, 246, 255, 0.35);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: none;
+}
+
+.btn:active {
+  background: radial-gradient(circle at 35% 30%, rgba(127, 246, 255, 0.5), rgba(10, 40, 70, 0.7));
+  transform: scale(0.94);
+}
+
+.fire {
+  width: 80px;
+  height: 80px;
+  border-color: rgba(255, 95, 220, 0.7);
+  box-shadow: 0 0 16px rgba(255, 79, 216, 0.45);
+  color: #ffd0f4;
+}
+
+.small {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+}
