@@ -77,4 +77,4 @@ Khôi phục backup:
 pg_restore --clean --if-exists -d "$DATABASE_URL" backups/tram_tin-YYYYMMDD-HHMMSS.dump
 ```
 
-Thay đổi số 1. 
+Thay đổi số 2. 
