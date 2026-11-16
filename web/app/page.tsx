@@ -79,6 +79,9 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
             {s.consecutiveFailures > 0 && <span className="dot-bad" title="Nguồn đang lỗi" />}
           </Link>
         ))}
+        <Link href="/shop" className="chip">
+          Tiệm đồ →
+        </Link>
       </nav>
 
       <div className="layout">
